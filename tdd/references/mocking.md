@@ -141,4 +141,4 @@ expect(sendMail).toHaveBeenCalledTimes(1);
 expect(sendMail).toHaveBeenCalledWith(expect.objectContaining({ to: 'a@example.com' }));
 ```
 
-Assert only what the behavior promises. Pinning exact call order, exact counts of incidental calls, or full argument objects that include irrelevant fields turns refactoring into test churn — that is testing the implementation, not the behavior (see `anti-patterns.md`).
+Assert only what the behavior promises. Pinning exact call order, exact counts of incidental calls, or full argument objects that include irrelevant fields turns refactoring into test churn — that is testing the implementation, not the behavior (see [anti-patterns.md](anti-patterns.md)).

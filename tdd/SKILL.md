@@ -135,7 +135,7 @@ Before changing behavior in code that has no tests: pin the *current* behavior w
 
 ## References (load on demand)
 
-- `references/vitest.md` — agent-safe CLI usage, modifiers, matchers, async patterns, type tests, snapshots, coverage
-- `references/test-style.md` — readable test patterns: AAA, naming, `it.each`, fixtures, assertion style
-- `references/mocking.md` — test-double policy and `vi.*` usage: mock boundaries, not your own logic
-- `references/anti-patterns.md` — catalog of TDD violations with corrections
+- [vitest.md](references/vitest.md) — agent-safe CLI usage, modifiers, matchers, async patterns, type tests, snapshots, coverage
+- [test-style.md](references/test-style.md) — readable test patterns: AAA, naming, `it.each`, fixtures, assertion style
+- [mocking.md](references/mocking.md) — test-double policy and `vi.*` usage: mock boundaries, not your own logic
+- [anti-patterns.md](references/anti-patterns.md) — catalog of TDD violations with corrections

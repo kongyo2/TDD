@@ -51,7 +51,7 @@ expect(cart.total()).toBe(30);
 
 **Smell:** The expected value is calculated with the same algorithm being tested (`expect(sum(xs)).toBe(xs.reduce(...))`).
 **Harm:** The test passes even when the algorithm is wrong — both sides share the bug.
-**Fix:** Hard-code expected literals computed by hand. See `test-style.md`.
+**Fix:** Hard-code expected literals computed by hand. See [test-style.md](test-style.md).
 
 ## 8. Conditional logic in tests
 
@@ -63,7 +63,7 @@ expect(cart.total()).toBe(30);
 
 **Smell:** Tests pass with `vitest run` but fail alone, shuffled, or with `--sequence.shuffle`.
 **Harm:** Cascading false failures; impossible to trust any single result.
-**Fix:** Fresh fixtures per test; `restoreMocks`/`unstubEnvs` in config; no module-level mutable state (see `test-style.md` and `mocking.md`).
+**Fix:** Fresh fixtures per test; `restoreMocks`/`unstubEnvs` in config; no module-level mutable state (see [test-style.md](test-style.md) and [mocking.md](mocking.md)).
 
 ## 10. Over-mocking your own code
 

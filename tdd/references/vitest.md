@@ -21,13 +21,13 @@
 Notes:
 
 - Substitute the detected package manager: `pnpm vitest run …`, `yarn vitest run …`, `bunx vitest run …`.
-- `npm test` is safe only if the `test` script itself contains `run` — check the detected scripts in SKILL.md first.
+- `npm test` is safe only if the `test` script itself contains `run` — check the detected scripts in [SKILL.md](../SKILL.md) first.
 - `vitest related` follows static imports only; dynamic `import(path)` is not traced.
 - **Never pass `-u` / `--update`** to refresh snapshots unless you have read every snapshot diff and the change is intentional.
 
 ## Globals
 
-Check the config (see SKILL.md detection). With `globals: true`, use `describe / it / expect / vi / beforeEach / assert` directly. Otherwise import explicitly:
+Check the config (see [SKILL.md](../SKILL.md) detection). With `globals: true`, use `describe / it / expect / vi / beforeEach / assert` directly. Otherwise import explicitly:
 
 ```typescript
 import { assert, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -41,7 +41,7 @@ Use modifiers instead of commenting out or deleting tests:
 - `it.skip('…', fn)` — temporarily disable. **Always** add a `// skip reason: …` comment.
 - `it.fails('…', fn)` — asserts the test *does* fail. Documents a known bug while keeping the suite green.
 - `it.only('…', fn)` — focus during the cycle. **Must be removed before Done** (CI fails on leftover `.only` because `--allowOnly` defaults to false there).
-- `it.each(table)('…', fn)` — parameterize **one** behavior across inputs (see `test-style.md` for when not to).
+- `it.each(table)('…', fn)` — parameterize **one** behavior across inputs (see [test-style.md](test-style.md) for when not to).
 - `test.for(table)('…', (case, { expect }) => …)` — like `each`, but plays well with fixtures and concurrent-safe `expect`.
 - `it.skipIf(cond)` / `it.runIf(cond)` — environment-conditional execution.
 - `it.concurrent` / `it.sequential` — parallelism control; use `sequential` when tests share state.
@@ -92,7 +92,7 @@ await expect.poll(() => queue.size()).toBe(0);
 await vi.waitFor(() => expect(handler).toHaveBeenCalled());
 ```
 
-Never `await new Promise(r => setTimeout(r, …))` in a test — use fake timers (`mocking.md`) or the helpers above.
+Never `await new Promise(r => setTimeout(r, …))` in a test — use fake timers ([mocking.md](mocking.md)) or the helpers above.
 
 ## Type tests
 
@@ -120,4 +120,4 @@ Prefer explicit assertions. When a snapshot is genuinely the right tool (seriali
 npx vitest run --coverage     # requires @vitest/coverage-v8 (or -istanbul)
 ```
 
-Coverage is a **byproduct** of behavior-driven tests, not a target. To raise it, find untested *behaviors* in the report and drive them with the normal Red-Green-Refactor cycle. Never add assertion-free tests that merely execute lines — see `anti-patterns.md` § Coverage gaming.
+Coverage is a **byproduct** of behavior-driven tests, not a target. To raise it, find untested *behaviors* in the report and drive them with the normal Red-Green-Refactor cycle. Never add assertion-free tests that merely execute lines — see [anti-patterns.md](anti-patterns.md) § Coverage gaming.
