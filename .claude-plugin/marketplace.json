@@ -1,0 +1,20 @@
+{
+  "name": "tdd",
+  "owner": {
+    "name": "kongyo2",
+    "email": ""
+  },
+  "metadata": {
+    "description": "kongyo式のtdd",
+    "version": "1.0.1"
+  },
+  "plugins": [
+    {
+      "name": "kongyo-skill-creator",
+      "description": "kongyo式のtdd",
+      "source": "./",
+      "strict": false,
+      "skills": ["./tdd"]
+    }
+  ]
+}
