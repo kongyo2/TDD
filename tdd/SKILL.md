@@ -1,7 +1,6 @@
 ---
 name: tdd
 description: Strict t-wada style Red-Green-Refactor TDD for TypeScript + Vitest projects. Use when implementing features, fixing bugs, changing runtime behavior, or refactoring logic — any task that adds or modifies production code. Enforces test-first development with a verified Red, minimal Green, and disciplined Refactor, plus agent-safe Vitest execution rules.
-argument-hint: [feature, bug, or refactoring task]
 ---
 
 # t-wada TDD — TypeScript × Vitest
