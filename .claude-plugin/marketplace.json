@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "kongyo-skill-creator",
+      "name": "tdd",
       "description": "kongyo式のtdd",
       "source": "./",
       "strict": false,
